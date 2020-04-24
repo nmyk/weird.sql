@@ -22,3 +22,7 @@ INSERT INTO """" SELECT * FROM """";
 
 -- returns 1
 SELECT COUNT(*);
+
+-- which transaction?
+ROLLBACK;
+COMMIT;
