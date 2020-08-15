@@ -13,7 +13,7 @@ SELECT EXISTS(SELECT);
 -- ????
 SELECT * FROM (SELECT) X;
 
--- select predicate not evaluated in EXISTS
+-- select expression not evaluated in EXISTS
 SELECT EXISTS(SELECT 1/0 FROM """");
 
 -- "successful insert" into table with FALSE check
@@ -23,6 +23,6 @@ INSERT INTO """" SELECT * FROM """";
 -- returns 1
 SELECT COUNT(*);
 
--- which transaction?
+-- what transaction?
 ROLLBACK;
 COMMIT;
