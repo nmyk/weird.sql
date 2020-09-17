@@ -26,3 +26,6 @@ SELECT COUNT(*);
 -- what transaction?
 ROLLBACK;
 COMMIT;
+
+-- select table alias instead of columns
+SELECT X FROM """" AS X;
