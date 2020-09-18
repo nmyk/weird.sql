@@ -27,5 +27,5 @@ SELECT COUNT(*);
 ROLLBACK;
 COMMIT;
 
--- select table alias instead of columns
-SELECT X FROM """" AS X;
+-- select table alias (which is same as table name) directly instead of columns
+SELECT """" FROM """" """";
