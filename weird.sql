@@ -4,6 +4,9 @@ SELECT;
 -- columnless table
 CREATE TABLE X();
 
+-- a weirder way to create a columnless table
+SELECT INTO Y;
+
 -- weird name
 ALTER TABLE X RENAME TO """";
 
@@ -20,7 +23,7 @@ SELECT EXISTS(SELECT 1/0 FROM """");
 ALTER TABLE """" ADD CONSTRAINT X CHECK (FALSE);
 INSERT INTO """" SELECT * FROM """";
 
--- returns 1
+-- returns 1, uses "*" with no table specified
 SELECT COUNT(*);
 
 -- what transaction?
